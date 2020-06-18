@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         Employee john = new Employee("John Doe", 30);
-        Employee tim = new Employee("Dawid Dawid", 26);
+        Employee dawid = new Employee("Dawid Dawid", 26);
         Employee jack = new Employee("Jack Hill", 40);
         Employee snow = new Employee("Snow White", 22);
         Employee red = new Employee("Red RidingHood", 35);
@@ -19,7 +19,7 @@ public class Main {
 
         List<Employee> employees = new ArrayList<>();
         employees.add(john);
-        employees.add(tim);
+        employees.add(dawid);
         employees.add(jack);
         employees.add(snow);
         employees.add(red);
