@@ -2,8 +2,10 @@ package com.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Main {
 
@@ -12,7 +14,7 @@ public class Main {
         Employee tim = new Employee("Dawid Dawid", 26);
         Employee jack = new Employee("Jack Hill", 40);
         Employee snow = new Employee("Snow White", 22);
-        Employee red = new Employee("Red ridingHood", 35);
+        Employee red = new Employee("Red RidingHood", 35);
         Employee charming = new Employee("Prince Charming", 31);
 
         List<Employee> employees = new ArrayList<>();
@@ -42,6 +44,16 @@ public class Main {
         System.out.println(greaterThan15.and(lessThan100).test(50));
         System.out.println(greaterThan15.and(lessThan100).test(15));
 
+        Random random = new Random();
+        Supplier<Integer> randomSupplier = () -> random.nextInt(1000);
+        for(int i = 0; i < 10; i++) {
+            System.out.println(randomSupplier.get());
+        }
+
+        employees.forEach(employee -> {
+            String lastName = employee.getName().substring(employee.getName().indexOf(' ') + 1);
+            System.out.println("Last Name is: " + lastName);
+        });
 
     }
 
